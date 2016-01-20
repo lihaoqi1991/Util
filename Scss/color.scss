@@ -3,32 +3,33 @@
 //          所以默认id的标识符定义为normal。这个域是独一无二的。不要重复在同一组中使用。
 //color:    定义颜色值，采用的是十六进制
 
-$color-stack:
-(group: orange, id: normal, color: #e67835),
+$color-stack: (group: orange, id: normal, color: #e67835),
 (group: orange, id: pale, color: #f8a878),
 (group: orange, id: dark, color: #ad490c),
 (group: blue, id: normal, color: #426682);
 
 // Color  Function
-@function color($group, $shade:normal, $transparency:1){
-    @each $color in $color-stack{
+@function color($group, $shade:normal, $transparency:1) {
+    @each $color in $color-stack {
         $c-group: map-get($color, group);
         $c-shade: map-get($color, id);
-        @if($group == map-get($color, group) and $shade == map-get($color, id)){
+        @if ($group == map-get($color, group) and $shade == map-get($color, id)) {
             @return rgba(map-get($color, color), $transparency);
         }
     }
 }
 
-body{
-    color: color(blue, normal,.8);
+body {
+    color: color(blue, normal, .8);
 }
-p{
+
+p {
     color: color(orange);
 }
-blockquote{
+
+blockquote {
     color: color(blue);
-    background: color(orange, pale,.4);
+    background: color(orange, pale, .4);
     border-color: color(orange, dark);
 }
 
