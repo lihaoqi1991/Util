@@ -1,0 +1,56 @@
+@charset "UTF-8";
+/**
+ * 为子元素设定定位上下文
+ */
+.parent {
+  position: relative; }
+
+/**
+ * 让子元素绝对居中于父容器
+ * 没有向 Sass mixin 传递参数，使用 CSS transform 属性实现居中效果
+ */
+.child-with-unknown-dimensions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+/**
+ * 让子元素绝对居中于父容器
+ * 向 Sass mixin 传递了宽度，所以就使用负向 margin 处理水平位置，
+ * 使用 CSS transform 处理垂直位置
+ */
+.child-with-known-width {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  margin-left: -200px;
+  transform: translateY(-50%); }
+
+/**
+ * 让子元素绝对居中于父容器
+ * 向 Sass mixin 传递了高度，所以就使用负向 margin 处理垂直位置，
+ * 使用 CSS transform 处理水平位置
+ */
+.child-with-known-height {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 400px;
+  margin-top: -200px;
+  transform: translateX(-50%); }
+
+/**
+ * 让子元素绝对居中于父容器
+ * 向 Sass mixin 传递了高度和宽度，所以就使用负向 margin 处理水平和垂直位置
+ */
+.child-with-known-dimensions {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin: -200px 0 0 -200px; }
+
+/*# sourceMappingURL=center.css.map */

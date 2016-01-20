@@ -1,0 +1,9 @@
+@mixin center-children {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.parent {
+    @include center-children;
+}
