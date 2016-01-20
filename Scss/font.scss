@@ -1,0 +1,48 @@
+//group:    这是一组字体名。这是字体值，例如brandon、clarendon或者serif
+//id:       字体唯一标识符。例如bold、light-italic、regular。其中regular是默认值。
+//font:     这才是你想要的字体，他可以是一个map也可以是变量
+//weight:   CSS中的font-weight，设置字体的粗细
+//style:    CSS中的font-style，设置字体的样式
+
+
+$font-stack:
+(group: brandon, id: light, font: ('Brandon Grot W01 Light', san-serif ), weight: 200, style: normal),
+(group: brandon, id: light-italic, font: ('Brandon Grot W01 Light', san-serif ), weight: 200, style: italic),
+(group: brandon, id: regular, font: ('Brandon Grot W01-Regular', san-serif), weight: 400, style: normal),
+(group: brandon, id: regular-italic, font: ('Brandon Grot W01-Regular', san-serif), weight: 400, style: italic),
+(group: brandon, id: bold, font: ('Brandon Grot W01 Black', san-serif), weight: 700, style: normal),
+(group: brandon, id: bold-italic, font: ('Brandon Grot W01-Regular', san-serif), weight: 400, style: italic),
+(group: clarendon, id: regular, font: ('Clarendon LT W01', serif), weight: 200, style: normal),
+(group: code, id: regular, font: (monospace), weight: 400, style: normal);
+
+// Breakpoint Mixin
+@mixin font($group, $id:regular){
+    @each $font in $font-stack{
+        @if($group == map-get($font, group) and $id == map-get($font, id)){
+            font-family: map-get($font, font);
+            font-weight: map-get($font, weight);
+            font-style: map-get($font, style);
+        }
+    }
+}
+
+h1{
+    @include font(brandon, light-italic);
+}
+p{
+    @include font(brandon);
+}
+p i{
+    @include font(brandon, regular-italic);
+}
+p b{
+    @include font(brandon, bold);
+}
+blockquote{
+    @include font(clarendon);
+}
+code{
+    @include font(code);
+}
+
+//http://www.w3cplus.com/preprocessor/5-useful-sass-snippets.html

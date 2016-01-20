@@ -1,3 +1,8 @@
+//group:    组名，可以取你想要的名，比如说：orange、blue。这个字段不是独特的颜色
+//id:       这是颜色唯一标识符。淡一点颜色叫pale，深一点的颜色叫dark，默认的normal。
+//          所以默认id的标识符定义为normal。这个域是独一无二的。不要重复在同一组中使用。
+//color:    定义颜色值，采用的是十六进制
+
 $color-stack:
 (group: orange, id: normal, color: #e67835),
 (group: orange, id: pale, color: #f8a878),
@@ -26,3 +31,5 @@ blockquote{
     background: color(orange, pale,.4);
     border-color: color(orange, dark);
 }
+
+//http://www.w3cplus.com/preprocessor/5-useful-sass-snippets.html
