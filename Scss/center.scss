@@ -28,6 +28,14 @@
     }
 }
 
+@mixin test($key, $value) {
+    -webkit-#{$key}: $value;
+    -ms-#{$key}: $value;
+}
+
+.a {
+    @include test(height, 500px);
+}
 /**
  * 为子元素设定定位上下文
  */
