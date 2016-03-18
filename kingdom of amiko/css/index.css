@@ -81,7 +81,7 @@ header ul li{
 }
 @-webkit-keyframes skill_bg{
 	from{
-		-webkit-transform: rotateZ(0);
+		-webkit-transform: rotateZ(0deg);
 	}
 	to{
 		-webkit-transform: rotateZ(360deg);
@@ -112,7 +112,7 @@ header ul li:before{
 }
 @-webkit-keyframes skill{
 	from{
-		-webkit-transform: translate(-50%,-50%) rotateZ(0);
+		-webkit-transform: translate(-50%,-50%) rotateZ(0deg);
 	}
 	to{
 		-webkit-transform: translate(-50%,-50%) rotateZ(-360deg);
@@ -120,7 +120,7 @@ header ul li:before{
 }
 @-moz-keyframes skill{
 	from{
-		-moz-transform: translate(-50%,-50%) rotateZ(0);
+		-moz-transform: translate(-50%,-50%) rotateZ(0deg);
 	}
 	to{
 		-moz-transform: translate(-50%,-50%) rotateZ(-360deg);
