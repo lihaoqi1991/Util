@@ -1,0 +1,143 @@
+@charset "utf-8";
+/* CSS Document */
+nav{
+	display: block;
+}
+
+.list{
+	width: 100%;
+	margin: 30px auto 0;
+}
+.list ul li{
+	margin:30px 0;
+	padding: 10px;
+	border-top: 1px solid #bbb;
+	border-bottom: 1px solid #bbb;
+	background: -webkit-linear-gradient(left,rgba(255,255,255,0) 20%,#fff 50%,rgba(255,255,255,0) 80%);
+	background: -moz-linear-gradient(left,rgba(255,255,255,0) 20%,#fff 50%,rgba(255,255,255,0) 80%);
+}
+.list ul li:after{
+	content: '';
+	display: block;
+	height: 0;
+	clear: both;
+}
+.list ul li .hd{
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px dotted #bbb;
+	line-height: 40px;
+}
+.list ul li .hd h2{
+	float: left;
+	font-size: 26px;
+}
+.list ul li .hd span{
+	float: right;
+	font-size: 16px;
+	color: #bbb;
+}
+.list ul li .hd b{
+	width: 50px;
+	height: 25px;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+	color: #999;
+	background: -webkit-linear-gradient(top,#fff,#eee);
+	background: -moz-linear-gradient(top,#fff,#eee);
+	display: inline-block;
+	margin: 0 15px;
+	text-align: center;
+	line-height: 25px;
+	font-weight: normal;
+}
+.list ul li .hd a:hover{
+	-webkit-animation: article_title 1s infinite alternate;
+	-moz-animation: article_title 1s infinite alternate;
+}
+@-webkit-keyframes article_title{
+	from{
+		transform: scale(1,1);
+	}
+	to{
+		transform: scale(1.1,1.1);
+	}
+}
+@-moz-keyframes article_title{
+	from{
+		transform: scale(1,1);
+	}
+	to{
+		transform: scale(1.1,1.1);
+	}
+}
+.list ul li .article_img_box{
+	width: 20%;
+	float: left;
+	margin-right: 30px;
+}
+.list ul li p{
+	font-size: 14px;
+}
+
+.type{
+	margin: 30px auto 0;
+	width: 100%;
+}
+em{
+	display: inline-block;
+	height: 40px;
+	width: 40px;
+	border: 1px solid #ccc;
+	border-radius: 50%;
+	background: -webkit-radial-gradient(top,#fff 0%,#bbb 50%,#ccc 70%);
+	background: -moz-radial-gradient(top,#fff 0%,#bbb 50%,#ccc 70%);
+	box-shadow: 0 1px 5px 0 #666;
+	text-align: center;
+	line-height: 40px;
+	margin: 0 20px; 
+	cursor: pointer;
+	color: #000;
+	transition: all 1s;
+}
+em:nth-child(1){
+	-webkit-animation: tag 2s linear infinite alternate;
+	-moz-animation: tag 2s linear infinite alternate;
+}
+em:nth-child(2){
+	-webkit-animation: tag 2s 1s linear infinite alternate;
+	-moz-animation: tag 2s 1s linear infinite alternate;
+}
+em:nth-child(3){
+	-webkit-animation: tag 2s 2s linear infinite alternate;
+	-moz-animation: tag 2s 2s linear infinite alternate;
+}
+em:nth-child(4){
+	-webkit-animation: tag 2s 3s linear infinite alternate;
+	-moz-animation: tag 2s 3s linear infinite alternate;
+}
+em:nth-child(5){
+	-webkit-animation: tag 2s 4s linear infinite alternate;
+	-moz-animation: tag 2s 4s linear infinite alternate;
+}
+@-webkit-keyframes tag{
+	from{
+		transform: translateY(0);
+	}
+	to{
+		transform: translateY(20px);
+	}
+}
+@-moz-keyframes tag{
+	from{
+		transform: translateY(0);
+	}
+	to{
+		transform: translateY(20px);
+	}
+}
+.type em:hover{
+	color: red;
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
+}
