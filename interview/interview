@@ -1,0 +1,279 @@
+1、什么是盒子模型?
+在网页中，一个元素占有空间的大小由几个部分构成，其中包括元素的内容(content)，元素的内边距(padding)，元素的边框(border)，元素的外边距(margin)四个部分。这四个部分占有的空间中，有的部分可以显示相应的内容，而有的部分只用来分隔相邻的区域或区域。4个部分一起构成了css中元素的盒模型。
+2、行内元素有哪些?块级元素有哪些? 空(void)元素有那些?
+行内元素：a、b、span、img、input、strong、select、label、em、button、textarea
+块级元素：div、ul、li、dl、dt、dd、p、h1-h6、blockquote
+空元素：即系没有内容的HTML元素，例如：br、meta、hr、link、input、img
+3、CSS实现垂直水平居中
+一道经典的问题，实现方法有很多种，以下是其中一种实现：
+HTML结构：
+CSS：
+.wrapper{position:relative;}
+.content{
+background-color:#6699FF;
+width:200px;
+height:200px;
+position: absolute; //父元素需要相对定位
+top: 50%;
+left: 50%;
+margin-top:-100px ; //二分之一的height，width
+margin-left: -100px;
+}
+4、简述一下src与href的区别
+href 是指向网络资源所在位置，建立和当前元素(锚点)或当前文档(链接)之间的链接，用于超链接。
+src是指向外部资源的位置，指向的内容将会嵌入到文档中当前标签所在位置;在请求src资源时会将其指向的资源下载并应用到文档内，例如js脚本，img图片和frame等元素。当浏览器解析到该元素时，会暂停其他资源的下载和处理，直到将该资源加载、编译、执行完毕，图片和框架等元素也如此，类似于将所指向资源嵌入当前标签内。这也是为什么将js脚本放在底部而不是头部。
+5、什么是CSS Hack?
+一般来说是针对不同的浏览器写不同的CSS,就是 CSS Hack。
+IE浏览器Hack一般又分为三种，条件Hack、属性级Hack、选择符Hack(详细参考CSS文档：css文档)。例如：
+// 1、条件Hack
+// 2、属性Hack
+.test{
+color:#090\9; /* For IE8+ */
+*color:#f00; /* For IE7 and earlier */
+_color:#ff0; /* For IE6 and earlier */
+}
+// 3、选择符Hack
+* html .test{color:#090;} /* For IE6 and earlier */
+* + html .test{color:#ff0;} /* For IE7 */
+6、简述同步和异步的区别
+同步是阻塞模式，异步是非阻塞模式。
+同步就是指一个进程在执行某个请求的时候，若该请求需要一段时间才能返回信息，那么这个进程将会一直等待下去，直到收到返回信息才继续执行下去;
+异步是指进程不需要一直等下去，而是继续执行下面的操作，不管其他进程的状态。当有消息返回时系统会通知进程进行处理，这样可以提高执行的效率。
+7、px和em的区别
+px和em都是长度单位，区别是，px的值是固定的，指定是多少就是多少，计算比较容易。em得值不是固定的，并且em会继承父级元素的字体大小。
+浏览器的默认字体高都是16px。所以未经调整的浏览器都符合: 1em=16px。那么12px=0.75em, 10px=0.625em
+8、什么叫优雅降级和渐进增强?
+渐进增强 progressive enhancement：
+针对低版本浏览器进行构建页面，保证最基本的功能，然后再针对高级浏览器进行效果、交互等改进和追加功能达到更好的用户体验。
+优雅降级 graceful degradation：
+一开始就构建完整的功能，然后再针对低版本浏览器进行兼容。
+区别：
+a. 优雅降级是从复杂的现状开始，并试图减少用户体验的供给
+b. 渐进增强则是从一个非常基础的，能够起作用的版本开始，并不断扩充，以适应未来环境的需要
+c. 降级(功能衰减)意味着往回看;而渐进增强则意味着朝前看，同时保证其根基处于安全地带
+9、浏览器的内核分别是什么?
+IE: trident内核
+Firefox：gecko内核
+Safari：webkit内核
+Opera：以前是presto内核，Opera现已改用Google Chrome的Blink内核
+Chrome：Blink(基于webkit，Google与Opera Software共同开发)
+JavaScript部分
+1、怎样添加、移除、移动、复制、创建和查找节点?
+1)创建新节点
+createDocumentFragment() //创建一个DOM片段
+createElement() //创建一个具体的元素
+createTextNode() //创建一个文本节点
+2)添加、移除、替换、插入
+appendChild() //添加
+removeChild() //移除
+replaceChild() //替换
+insertBefore() //插入
+3)查找
+getElementsByTagName() //通过标签名称
+getElementsByName() //通过元素的Name属性的值
+getElementById() //通过元素Id，唯一性
+2、实现一个函数clone，可以对JavaScript中的5种主要的数据类型(包括Number、String、Object、Array、Boolean)进行值复制。
+/**
+* 对象克隆
+* 支持基本数据类型及对象
+* 递归方法
+*/
+function clone(obj) {
+    var o;
+    switch (typeof obj) {
+        case "undefined":
+            break;
+        case "string":
+            o = obj + "";
+            break;
+        case "number":
+            o = obj - 0;
+            break;
+        case "boolean":
+            o = obj;
+            break;
+        case "object": // object 分为两种情况 对象(Object)或数组(Array)
+            if (obj === null) {
+                o = null;
+            } else {
+                if (Object.prototype.toString.call(obj).slice(8, -1) === "Array") {
+                    o = [];
+                    for (var i = 0; i < obj.length; i++) {
+                        o.push(clone(obj[i]));
+                    }
+                } else {
+                    o = {};
+                    for (var k in obj) {
+                        o[k] = clone(obj[k]);
+                    }
+                }
+            }
+            break;
+        default:
+            o = obj;
+            break;
+    }
+    return o;
+}
+3、如何消除一个数组里面重复的元素?
+// 方法一：
+var arr1 =[1,2,2,2,3,3,3,4,5,6],
+    arr2 = [];
+for(var i = 0,len = arr1.length; i< len; i++){
+    if(arr2.indexOf(arr1[i]) < 0){
+        arr2.push(arr1[i]);
+    }
+}
+document.write(arr2); // 1,2,3,4,5,6
+4、想实现一个对页面某个节点的拖曳?如何做?(使用原生JS)。
+5、在Javascript中什么是伪数组?如何将伪数组转化为标准数组?
+伪数组(类数组)：无法直接调用数组方法或期望length属性有什么特殊的行为，但仍可以对真正数组遍历方法来遍历它们。典型的是函数的argument参数，还有像调用getElementsByTagName,document.childNodes之类的,它们都返回NodeList对象都属于伪数组。可以使用Array.prototype.slice.call(fakeArray)将数组转化为真正的Array对象。
+function log(){
+    var args = Array.prototype.slice.call(arguments);
+//为了使用unshift数组方法，将argument转化为真正的数组
+    args.unshift('(app)');
+    console.log.apply(console, args);
+};
+6、Javascript中callee和caller的作用?
+caller是返回一个对函数的引用，该函数调用了当前函数;
+callee是返回正在被执行的function函数，也就是所指定的function对象的正文。
+7、请描述一下cookies，sessionStorage和localStorage的区别
+sessionStorage用于本地存储一个会话(session)中的数据，这些数据只有在同一个会话中的页面才能访问并且当会话结束后数据也随之销毁。因此sessionStorage不是一种持久化的本地存储，仅仅是会话级别的存储。而localStorage用于持久化的本地存储，除非主动删除数据，否则数据是永远不会过期的。
+web storage和cookie的区别
+Web Storage的概念和cookie相似，区别是它是为了更大容量存储设计的。Cookie的大小是受限的，并且每次你请求一个新的页面的时候Cookie都会被发送过去，这样无形中浪费了带宽，另外cookie还需要指定作用域，不可以跨域调用。
+除此之外，Web Storage拥有setItem,getItem,removeItem,clear等方法，不像cookie需要前端开发者自己封装setCookie，getCookie。但是Cookie也是不可以或缺的：Cookie的作用是与服务器进行交互，作为HTTP规范的一部分而存在 ，而Web Storage仅仅是为了在本地“存储”数据而生。
+8、手写数组快速排序
+关于快排算法的详细说明，可以参考阮一峰老师的文章快速排序
+“快速排序”的思想很简单，整个排序过程只需要三步：
+(1)在数据集之中，选择一个元素作为”基准”(pivot)。
+(2)所有小于”基准”的元素，都移到”基准”的左边;所有大于”基准”的元素，都移到”基准”的右边。
+(3)对”基准”左边和右边的两个子集，不断重复第一步和第二步，直到所有子集只剩下一个元素为止。
+9、统计字符串”aaaabbbccccddfgh”中字母个数或统计最多字母数。
+var str = "aaaabbbccccddfgh";
+var obj = {};
+for(var i=0;i<str.length;i++){
+    var v = str.charAt(i);
+    if(obj[v] && obj[v].value == v){
+        obj[v].count = ++ obj[v].count;
+    }else{
+        obj[v] = {};
+        obj[v].count = 1;
+        obj[v].value = v;
+    }
+}
+for(key in obj){
+    document.write(obj[key].value +'='+obj[key].count+' '); // a=4 b=3 c=4 d=2 f=1 g=1 h=1
+}
+10、写一个function，清除字符串前后的空格。(兼容所有浏览器)
+function trim(str) {
+    if (str && typeof str === "string") {
+        return str.replace(/(^\s*)|(\s*)$/g,""); //去除前后空白符
+    }
+}
+其他
+1、一次完整的HTTP事务是怎样的一个过程?
+基本流程：
+a. 域名解析
+b. 发起TCP的3次握手
+c. 建立TCP连接后发起http请求
+d. 服务器端响应http请求，浏览器得到html代码
+e. 浏览器解析html代码，并请求html代码中的资源
+f. 浏览器对页面进行渲染呈现给用户
+2、对前端工程师这个职位你是怎么样理解的?
+a. 前端是最贴近用户的程序员，前端的能力就是能让产品从 90分进化到 100 分，甚至更好
+b. 参与项目，快速高质量完成实现效果图，精确到1px;
+c. 与团队成员，UI设计，产品经理的沟通;
+d. 做好的页面结构，页面重构和用户体验;
+e. 处理hack，兼容、写出优美的代码格式;
+f. 针对服务器的优化、拥抱最新前端技术。
+
+现在动辄几兆大小的页面加载量，让性能优化成了不可避免的热门话题。WEB 应用越流畅，用户体验就会越好，继而带来更多的访问量。这也就是说，我们应该反省一下那些过度美化的 CSS3 动画和多重操作的 DOM 元素是否都考虑到了在性能方面的影响。在说性能优化之前，我们有必要理清浏览器视觉绘制方面的两个术语：
+
+Repaint（重绘）：如果某些操作影响了 DOM 元素的可见性，但又没有影响布局，那么就会发生浏览器的重绘，比如opacity，background-color,visibility 和 outline 属性。由于浏览器必须检查 DOM 中所有节点的可见性——某些图层或许会置于重绘元素的图层下面，所以重绘是一个非常繁重的逻辑。
+Reflow（回流）：回流是一个更具破坏性的操作，它会让浏览器重新计算所有元素的坐标位置和尺寸大小。往往由于一个元素的变化，继而引起其子元素、父元素以及相邻元素的变化。
+
+不管用户或者应用本身是否正在执行某些逻辑，这两种操作都会阻塞浏览器进程。极端情况下，一个 CSS 效果会降低 JavaScript 的执行速度。下面是触发回流事件的几种情境：
+
+添加、删除和修改可见的 DOM 元素
+添加、删除和修改部分 CSS 样式，比如修改元素的宽度，会影响其相邻元素的布局位置
+CSS3 动画和过渡效果
+使用 offsetWidth 和 offsetHeight。这种情境很诡异，读取一个元的 offsetWidth 和 offsetHeight 属性会触发回流
+用户行为，比如鼠标悬停、输入文本、调整窗口大小、修改字体样式等等
+
+浏览器的底层实现各有不同，所以渲染页面的开销也各有轻重。好在我们有一些通常规则可以进行性能优化。
+
+使用最佳实践所建议的布局技巧
+
+虽然已经是 2015 了，但我还是要说不要使用行内联样式和 table 布局。
+HTML 文档下载完成后，行内样式会触发一次额外的回流事件。解析器在解析 table 布局时需要计算大量的单元格的尺寸，所以是件很重的操作。由于单元格往往是根据表头宽度确定的，所以使用 table-layout: fixed 可以缓解部分性能消耗。
+
+使用 Flexbox 布局也存在性能损失，因为在页面加载完成后，flex item 可能会发生位置和尺寸的变化。
+
+精简 CSS 样式
+
+样式越少，回流越快，此外，尽量不要使用过于复杂的选择器。这一问题尤其突出在使用类似 Bootstrap 框架的网站上。使用Unused CSS,uCSS,grunt-uncss 和 gulp-uncss 等工具可以有效剔除无用样式。
+
+精简 DOM 层级
+
+精简 DOM 层级，指的是减少 DOM 树的级数已经每一分支上 DOM 元素的数量，结果就是层级越少、数量越少，回流越快。此外，如果无需考虑旧版本浏览器，应该尽量剔除无意义的包裹类标签和层级。
+
+细粒度操作 DOM 树
+
+操作 DOM 树时的粒度要尽可能细化，这有助于减弱局部 DOM 变化给整体带来的影响。
+
+从文档流中移除复杂的动画效果
+
+应该确保使用动画的元素脱离了文档流，使用 position: absolute 和 position: fixed 属性脱离文档流的元素会被浏览器创建一个新层来存放，这些图层上的修改不会影响其他图层上的元素。
+
+巧用隐藏方式
+
+使用 display: none; 隐藏的元素不会触发页面的重绘和回流事件，所以可以在这些元素隐藏期间配置样式，配置完成后再转换为可见状态。
+
+批量更新元素
+
+单词更新所有 DOM 元素的性能要优于多次更新。下面这段代码触发了三次页面回流：
+
+var myelement = document.getElementById('myelement');
+myelement.width = '100px';
+myelement.height = '200px';
+myelement.style.margin = '10px';
+
+通过以下代码可以精简为一次页面回流事件，并且提高了代码的可维护性：
+
+var myelement = document.getElementById('myelement');
+myelement.classList.add('newstyles');
+
+.newstyles {
+    width: 100px;
+    height: 200px;
+    margin: 10px;
+}
+
+同理，我们还可以减少操作 DOM 的频率。假设我们要创建一个如下所示的无序列表：
+
+
+如果分次添加每一个 item 将会触发多次页面回流，简单而高效的方式是使用 DOM fargment 在内存中创建完整的 DOM 节点，然后一次性添加到 DOM 中：
+
+var
+    i, li,
+    frag = document.createDocumentFragment(),
+    ul = frag.appendChild(document.createElement('ul'));
+
+for (i = 1; i <= 3; i++) {
+    li = ul.appendChild(document.createElement('li'));
+    li.textContent = 'item ' + i;
+}
+
+document.body.appendChild(frag);
+
+约束元素变化的影响
+
+这里的约束是指，尽量避免某个元素的变化引起大范围的变化。假设我们有一个 tab 选项卡的组件，选项卡内部的内容长短不一，这就导致了每个选项卡的高度不唯一。这一设计带来的问题就是每次切换选项卡时，周围的元素都要重新布局。我们可以通过一个固定高度来避免这一情况。
+
+权衡流畅度和性能
+
+一次移动一像素的位置看起来虽然很流畅，但对于某些低性能终端会是很大的压力。一次移动四像素降低帧速虽然看起来稍有些迟钝，但性能压力降低了。这就是需要我们权衡的地方：流畅度和性能。
+
+使用开发者工具分析页面重绘
+
+目前主流浏览器都在开发者工具中提供了监控页面重绘的功能。在 Blink/Webkit 内核的浏览器中，使用 Timeline 面板可以记录一个页面活动详情：
