@@ -277,3 +277,15 @@ document.body.appendChild(frag);
 使用开发者工具分析页面重绘
 
 目前主流浏览器都在开发者工具中提供了监控页面重绘的功能。在 Blink/Webkit 内核的浏览器中，使用 Timeline 面板可以记录一个页面活动详情：
+
+
+<ul class="flex">
+    <li>a</li>
+    <li>b</li>
+    <li>c</li>
+</ul>
+
+.flex{display:flex;width:600px;margin:0;padding:0;list-style:none;}
+.flex li:nth-child(1){width:200px;}
+.flex li:nth-child(2){flex-grow:1;width:50px;}
+.flex li:nth-child(3){flex-grow:3;width:50px;}
