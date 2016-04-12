@@ -2,75 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="355193c8-18a1-4f05-8e95-5baa26a1dc27" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/Camera.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/arr_r.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/back.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/banner01.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/banner02.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/banner03.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/banner04.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/banner05.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/car.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/clock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/clock_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/close.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/credit.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/favorites_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/favorites_icon_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/gray_jt.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/handbag_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/handbag_icon_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/font/iconfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/font/center/iconfont.ttf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/index_icon01.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/index_icon01_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/index_icon02.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/index_icon02_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/index_icon03.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/index_icon03_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/index_nav.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/index_nav_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/index_nav_top.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/input.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ka01.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ka02.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ka03.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/ka04.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/laba.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/left_top_bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/lock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/login_bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/lu.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/more.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/nav_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/nva_bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pho.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pho_bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/photo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/pic.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/problem_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/problem_icon_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/reset.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/save.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/see.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/site.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/site_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/sound.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/sound_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/title_icon01.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/title_icon02.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/title_icon03.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/title_icon04.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/touxiang.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/trend_icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/trend_icon_on.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HeaderView.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/all.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/common.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/font/iconfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/font/center/iconfont.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/login-appcenter.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interview/interview.js" afterPath="$PROJECT_DIR$/interview/interview.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/interview/interview" afterPath="$PROJECT_DIR$/interview/interview" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -123,21 +55,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html/test.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.63109756">
               <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="interview" pinned="false" current-in-tab="true">
+      <file leaf-file-name="interview" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/interview/interview">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="14.789357">
-              <caret line="290" column="46" selection-start-line="290" selection-start-column="46" selection-end-line="290" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="326" column="0" selection-start-line="326" selection-start-column="0" selection-end-line="326" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -146,7 +78,7 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/html/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.966666">
+            <state vertical-scroll-proportion="0.0">
               <caret line="21" column="32" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="32" />
               <folding />
             </state>
@@ -177,9 +109,9 @@
         <entry file="file://$PROJECT_DIR$/interview/interview.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
               <folding>
-                <element signature="n#!!doc;n#Foo#0" expanded="false" />
+                <element signature="e#0#41#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -216,9 +148,9 @@
         <option value="$PROJECT_DIR$/HTML/test.html" />
         <option value="$PROJECT_DIR$/TypeScript/Array.js" />
         <option value="module.js" />
-        <option value="$PROJECT_DIR$/interview/interview.js" />
         <option value="$PROJECT_DIR$/HTML/index.html" />
         <option value="$PROJECT_DIR$/interview/interview" />
+        <option value="$PROJECT_DIR$/interview/interview.js" />
       </list>
     </option>
   </component>
@@ -257,7 +189,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -352,6 +283,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -365,6 +297,7 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -500,7 +433,13 @@
       <option name="project" value="LOCAL" />
       <updated>1458787214038</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="interview">
+      <created>1459845293026</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1459845293026</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView">
@@ -516,12 +455,14 @@
     <frame x="0" y="23" width="1440" height="806" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32913166" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913166" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2254902" sideWeight="0.49753347" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32960895" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18675123" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39915967" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.197479" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2254902" sideWeight="0.5024665" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913166" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -529,9 +470,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39915967" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.197479" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -561,15 +500,15 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/interview/interview.js</url>
-          <line>43</line>
+          <line>46</line>
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/interview/interview.js</url>
-          <line>39</line>
+          <line>42</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="NodeJSConfigurationType">
@@ -895,14 +834,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/html/test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TypeScript/Array.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -929,8 +860,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.966666">
+        <state vertical-scroll-proportion="0.0">
           <caret line="21" column="32" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/interview/interview">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="326" column="0" selection-start-line="326" selection-start-column="0" selection-end-line="326" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -938,17 +877,17 @@
     <entry file="file://$PROJECT_DIR$/interview/interview.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
           <folding>
-            <element signature="n#!!doc;n#Foo#0" expanded="false" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/interview/interview">
+    <entry file="file://$PROJECT_DIR$/html/test.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="14.789357">
-          <caret line="290" column="46" selection-start-line="290" selection-start-column="46" selection-end-line="290" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.63109756">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
