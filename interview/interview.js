@@ -82,4 +82,11 @@ setTimeout(function () {
 }, 0);
 console.log('three');
 
+var obj = {
+    a: 1,
+    b: function () {
+        console.log(this.a);
+    }
+};
+var a = 2, objb = obj.b();
 
