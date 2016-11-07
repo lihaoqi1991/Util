@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .rdo{display: none;}
+        .rdo + label{
+            position: relative;
+        }
+        .rdo + label:before{
+            content:'';
+            position: relative;
+            background-color: #FFF;
+            border: 1px solid #C1CACA;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+            padding: 9px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+        .rdo:checked + label:before{
+            background-color: #CEF2F7;
+            border: 1px solid #4cda60;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05)
+            , inset 15px 10px -12px rgba(255,255,255,0.1);
+        }
+        .rdo:checked + label:after{
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 6px;
+            background-color: #4cda60;
+            padding: 4px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <input type="radio" name="radio" id="radio1" class="rdo" checked /><label for="radio1">选项1</label>
+    <input type="radio" name="radio" id="radio2" class="rdo" /><label for="radio2">选项2</label>
+</body>
+</html>
