@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <title>Title</title>
+    <style>
+        .file {
+            position: relative;
+            display: inline-block;
+            background: #D0EEFF;
+            border: 1px solid #99D3F5;
+            border-radius: 4px;
+            padding: 4px 12px;
+            overflow: hidden;
+            color: #1E88C7;
+            text-decoration: none;
+            text-indent: 0;
+            line-height: 40px;
+            width: 200px;
+            left: 100px;
+            top: 100px;
+            height: 40px;
+        }
+        .file input {
+            position: absolute;
+            font-size: 100px;
+            right: 0;
+            top: 0;
+            opacity: 0;
+        }
+        .file:hover {
+            background: #AADFFD;
+            border-color: #78C3F3;
+            color: #004974;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:;" class="file">选择文件
+        <input type="file" name="" id="file">
+    </a>
+    <div style="position: relative;top: 100px; width: 100%;">
+        <img src="" id="img" style="width: 100%"/>
+    </div>
+<script>
+    var fileUpload = document.getElementById('file');
+    fileUpload.addEventListener('change', function(e){
+        var file = e.target.files||e.dataTransfer.files;
+        if(file){
+            var reader = new FileReader();
+            reader.onload = function(e){
+                document.getElementById('img').src = e.target.result;
+            };
+            reader.readAsDataURL(file[0]);
+        }
+    });
+</script>
+</body>
+</html>
