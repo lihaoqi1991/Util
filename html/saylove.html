@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>一生所爱 时间日记</title><!--原创作品 禁止用于商业-->
+    <link rel="shortcut icon" href="image/love.ico"/>
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=gb2312">
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+    <script type="text/javascript">
+        var i = 0;
+        function cns() {
+            var c = document.getElementById('cns');
+            var cns = c.getContext("2d");
+            cns.save();
+            cns.translate(0.5, 0.5);
+            cns.lineWidth = 1;
+            cns.moveTo(0, 95);
+            cns.lineTo(i, 95);
+            cns.stroke();
+            i++;
+            var clear = setTimeout("cns()", 30);
+            if (i >= 675) {
+                clearTimeout(clear);
+                RS();
+            }
+            if (i == 100) {
+                cns.moveTo(i, 95);
+                cns.lineTo(i, 85);
+                one();
+            }
+            if (i == 250) {
+                cns.moveTo(i, 95);
+                cns.lineTo(i, 85);
+                two();
+            }
+            if (i == 400) {
+                cns.moveTo(i, 95);
+                cns.lineTo(i, 85);
+                three();
+                document.getElementById('boy').style.display = "block";
+            }
+            if (i == 550) {
+                cns.moveTo(i, 95);
+                cns.lineTo(i, 85);
+                four();
+            }
+            cns.restore();
+        }
+        //右边斜线
+        var RB = 20;//画出爱心的大小
+        var rb = 675;
+        var rbi = 0;
+        function RS() {
+            var c = document.getElementById('cns');
+            var cns = c.getContext("2d");
+            cns.beginPath();
+            cns.moveTo(rb, 95);
+            cns.lineTo(rb + rbi, 95 - rbi);
+            cns.strokeStyle = "rgba(255,0,0,0.5)";
+            cns.stroke();
+            rbi++;
+            var crb = setTimeout("RS()", 0);
+            if (rbi >= RB) {
+                clearTimeout(crb);
+                RC();
+            }
+        }
+        //右边半圆
+        var cri = 45;
+        function RC() {
+            var c = document.getElementById('cns');
+            var cns = c.getContext("2d");
+            cns.beginPath();
+            cns.arc(rb + RB / 2, 95 - 1.5 * RB, Math.sqrt(2 * (RB / 2) * (RB / 2)), Math.PI / 4, (cri / 180) * Math.PI, true);
+            cns.stroke();
+            cri--;
+            var cr = setTimeout("RC()", 0);
+            if (cri <= -135) {
+                clearTimeout(cr);
+                LC();
+            }
+        }
+        //左边半圆
+        var cli = 45;
+        function LC() {
+            var c = document.getElementById('cns');
+            var cns = c.getContext("2d");
+            cns.save();
+            cns.translate(0.5, 0.5);
+            cns.lineWidth = 1;
+            cns.beginPath();
+            cns.arc(rb - RB / 2, 95 - 1.5 * RB, Math.sqrt(2 * (RB / 2) * (RB / 2)), -Math.PI / 4, (-cli / 180) * Math.PI, true);
+            cns.stroke();
+            cli++;
+            var cr = setTimeout("LC()", 0);
+            if (cli >= 225) {
+                clearTimeout(cr);
+                LB();
+            }
+            cns.restore();
+        }
+        //左边斜线
+        var lbi = 0;
+        function LB() {
+            var c = document.getElementById('cns');
+            var cns = c.getContext("2d");
+            cns.beginPath();
+            cns.moveTo(rb - RB, 95 - RB);
+            cns.lineTo(rb - RB + lbi, 95 - RB + lbi);
+            cns.stroke();
+            lbi++;
+            var cr = setTimeout("LB()", 0);
+            if (lbi >= RB) {
+                clearTimeout(cr);
+                R();
+                buttonD();
+            }
+        }
+        //右边直线
+        var ir = 675;
+        function R() {
+            var c = document.getElementById('cns');
+            var cns = c.getContext("2d");
+            cns.save();
+            cns.translate(0.5, 0.5);
+            cns.lineWidth = 1;
+            cns.beginPath();
+            cns.moveTo(rb, 95);
+            cns.lineTo(ir, 95);
+            cns.strokeStyle = 'rgba(0,0,0,1)'
+            cns.stroke();
+            ir++;
+            var cr = setTimeout("R()", 30);
+            if (ir >= 1350) {
+                clearTimeout(cr);
+            }
+            if (ir == 800) {
+                cns.moveTo(ir, 95);
+                cns.lineTo(ir, 85);
+                five();
+            }
+            if (ir == 950) {
+                cns.moveTo(ir, 95);
+                cns.lineTo(ir, 85);
+                six();
+                document.getElementById('girl').style.opacity = 1;
+            }
+            if (ir == 1100) {
+                cns.moveTo(ir, 95);
+                cns.lineTo(ir, 85);
+                seven();
+            }
+            if (ir == 1250) {
+                cns.moveTo(ir, 95);
+                cns.lineTo(ir, 85);
+                eight();
+            }
+            cns.stroke();
+            cns.restore();
+        }
+        var speed = 30;
+        var once = 0;
+        function one() {
+            document.getElementById('once').style.display = "block";
+            document.getElementById('once').style.opacity = once;
+            once += 0.01;
+            var cr = setTimeout("one()", speed);
+            if(once >= 1){
+                clearTimeout(cr);
+            }
+         }
+        var second = 0;
+        function two() {
+            document.getElementById('second').style.display = "block";
+            document.getElementById('second').style.opacity = second;
+            second += 0.01;
+            var cr = setTimeout("two()", speed);
+            if(second >= 1){
+                clearTimeout(cr);
+            }
+        }
+        var third = 0;
+        function three() {
+            document.getElementById('third').style.display = "block";
+            document.getElementById('third').style.opacity = third;
+            third += 0.01;
+            var cr = setTimeout("three()", speed);
+            if(third >= 1){
+                clearTimeout(cr);
+            }
+        }
+        var fourth = 0;
+        function four() {
+            document.getElementById('fourth').style.display = "block";
+            document.getElementById('fourth').style.opacity = fourth;
+            fourth += 0.01;
+            var cr = setTimeout("four()", 30);
+            if(fourth >= 1){
+                clearTimeout(cr);
+            }
+        }
+        var fifth = 0;
+        function five() {
+            document.getElementById('fifth').style.display = "block";
+            document.getElementById('fifth').style.opacity = fifth;
+            fifth += 0.01;
+            var cr = setTimeout("five()", speed);
+            if(fifth >= 1){
+                clearTimeout(cr);
+            }
+        }
+        var sixth = 0;
+        function six() {
+            document.getElementById('sixth').style.display = "block";
+            document.getElementById('sixth').style.opacity = sixth;
+            sixth += 0.01;
+            var cr = setTimeout("six()", 30);
+            if(sixth >= 1){
+                clearTimeout(cr);
+            }
+        }
+        var seventh = 0;
+        function seven() {
+            document.getElementById('seventh').style.display = "block";
+            document.getElementById('seventh').style.opacity = seventh;
+            seventh += 0.01;
+            var cr = setTimeout("seven()", 30);
+            if(seventh >= 1){
+                clearTimeout(cr);
+            }
+        }
+        var eighth = 0;
+        function eight() {
+            document.getElementById('eighth').style.display = "block";
+            document.getElementById('eighth').style.opacity = eighth;
+            eighth += 0.01;
+            var cr = setTimeout("eight()", 30);
+            if(eighth >= 1){
+                clearTimeout(cr);
+            }
+        }
+        //一三年九月一号，开始显示
+        var f = setTimeout(stapOne, 1000);
+        var a = 0;
+        function stapOne() {
+            clearTimeout(f);
+            document.getElementById('a').style.opacity = a;
+            a += 0.01;
+            var clear = setTimeout("stapOne()", speed);
+            if (a >= 1) {
+                clearTimeout(clear);
+                stapOneDis();
+            }
+        }
+        //开始消失
+        var aa = 1;
+        function stapOneDis() {
+            document.getElementById('a').style.opacity = aa;
+            aa -= 0.01;
+            var ca = setTimeout("stapOneDis()", speed);
+            if (aa < 0) {
+                clearTimeout(ca);
+                stapTwo();
+            }
+        }
+        //文字，遇见，开始显示
+        var b = 0;
+        function stapTwo() {
+            document.getElementById('b').style.opacity = b;
+            b += 0.01;
+            var cb = setTimeout("stapTwo()", speed);
+            if (b >= 1) {
+                clearTimeout(cb);
+                stapTwoDis();
+            }
+        }
+        //消失
+        var bb = 1;
+        function stapTwoDis() {
+            document.getElementById('b').style.opacity = bb;
+            bb -= 0.01;
+            var cbb = setTimeout("stapTwoDis()", speed);
+            if (bb < 0) {
+                clearTimeout(cbb);
+                stapThree();
+            }
+        }
+        //文字，时间开始。。，开始显示
+        var c = 0;
+        function stapThree() {
+            document.getElementById('c').style.opacity = c;
+            document.getElementById('cc').style.opacity = c;
+            c += 0.01;
+            var cl = setTimeout("stapThree()", speed);
+            if (c >= 1) {
+                clearTimeout(cl);
+                stapThreeDis();
+            }
+        }
+        var cc = 1;
+        function stapThreeDis() {
+            document.getElementById('cc').style.opacity = cc;
+            document.getElementById('c').style.opacity = cc;
+            cc -= 0.01;
+            var ccl = setTimeout("stapThreeDis()", speed);
+            if (cc < 0) {
+                clearTimeout(ccl);
+                cns();
+            }
+        }
+        function buttonD() {
+            document.getElementById('d').style.opacity = 1;
+            document.getElementById('e').style.opacity = 1;
+            document.getElementById('f').style.opacity = 1;
+            document.getElementById('g').style.opacity = 1;
+        }
+        function once1() {
+            document.getElementById('once1').style.opacity = 1;
+            document.getElementById('ai').style.opacity = 1;
+        }
+        function once2() {
+            document.getElementById('once1').style.opacity = 0;
+            document.getElementById('ai').style.opacity = 0;
+        }
+        function second1() {
+            document.getElementById('second1').style.opacity = 1;
+            document.getElementById('ni').style.opacity = 1;
+        }
+        function second2() {
+            document.getElementById('second1').style.opacity = 0;
+            document.getElementById('ni').style.opacity = 0;
+        }
+        function third1() {
+            document.getElementById('third1').style.opacity = 1;
+            document.getElementById('de').style.opacity = 1;
+        }
+        function third2() {
+            document.getElementById('third1').style.opacity = 0;
+            document.getElementById('de').style.opacity = 0;
+        }
+        function fourth1() {
+            document.getElementById('fourth1').style.opacity = 1;
+            document.getElementById('gan').style.opacity = 1;
+        }
+        function fourth2() {
+            document.getElementById('fourth1').style.opacity = 0;
+            document.getElementById('gan').style.opacity = 0;
+        }
+        function fifth1() {
+            document.getElementById('fifth1').style.opacity = 1;
+            document.getElementById('jue').style.opacity = 1;
+        }
+        function fifth2() {
+            document.getElementById('fifth1').style.opacity = 0;
+            document.getElementById('jue').style.opacity = 0;
+        }
+        function sixth1() {
+            document.getElementById('sixth1').style.opacity = 1;
+            document.getElementById('zui').style.opacity = 1;
+        }
+        function sixth2() {
+            document.getElementById('sixth1').style.opacity = 0;
+            document.getElementById('zui').style.opacity = 0;
+        }
+        function seventh1() {
+            document.getElementById('seventh1').style.opacity = 1;
+            document.getElementById('mei').style.opacity = 1;
+        }
+        function seventh2() {
+            document.getElementById('seventh1').style.opacity = 0;
+            document.getElementById('mei').style.opacity = 0;
+        }
+        function eighth1() {
+            document.getElementById('eighth1').style.opacity = 1;
+            document.getElementById('hao').style.opacity = 1;
+        }
+        function eighth2() {
+            document.getElementById('eighth1').style.opacity = 0;
+            document.getElementById('hao').style.opacity = 0;
+        }
+        var t = new Date();
+        var year = t.getFullYear();
+        var mouth = t.getMonth();
+        var day = t.getDate();
+        function st() {
+            if (year >= 2000 && mouth >= 1 && day >= 1) {
+                document.getElementById('set').style.opacity = 1;
+            }
+            else {
+                alert("20年9月1号过后才能看哦");
+            }
+        }
+    </script>
+</head>
+<style>
+    .cns {
+        position: absolute;
+        top: 30%;
+    }
+
+    img {
+        position: absolute;
+    }
+
+    .boy {
+        width: 100px;
+        height: 150px;
+        top: 68%;
+        left: 33%;
+        opacity: 1;
+        display: none;
+        cursor: pointer;
+    }
+
+    .girl {
+        width: 100px;
+        height: 150px;
+        top: 68%;
+        left: 62%;
+        opacity: 0;
+    }
+
+    p {
+        position: absolute;
+        font-size: 16px;
+        font-family: 楷体;
+        opacity: 0;
+        top: 45%;
+        cursor: pointer;
+    }
+
+    .once {
+        left: 5%;
+        display: none;
+        opacity: 1;
+    }
+
+    .once1 {
+        left: 5%;
+        top: 30%;
+    }
+
+    .second {
+        left: 16%;
+        display: none;
+        opacity: 1;
+    }
+
+    .second1 {
+        top: 30%;
+        left: 16%;
+    }
+
+    .third {
+        left: 27%;
+        display: none;
+        opacity: 1;
+    }
+
+    .third1 {
+        top: 30%;
+        left: 27%;
+    }
+
+    .fourth {
+        left: 38%;
+        display: none;
+        opacity: 1;
+    }
+
+    .fourth1 {
+        top: 30%;
+        left: 38%;
+    }
+
+    .fifth {
+        left: 56%;
+        display: none;
+        opacity: 1;
+    }
+
+    .fifth1 {
+        top: 30%;
+        left: 56%;
+    }
+
+    .sixth {
+        left: 67%;
+        display: none;
+        opacity: 1;
+    }
+
+    .sixth1 {
+        top: 30%;
+        left: 67%;
+    }
+
+    .seventh {
+        left: 78%;
+        display: none;
+        opacity: 1;
+    }
+
+    .seventh1 {
+        top: 30%;
+        left: 78%;
+    }
+
+    .eighth {
+        left: 89%;
+        display: none;
+        opacity: 1;
+    }
+
+    .eighth1 {
+        top: 30%;
+        left: 89%;
+    }
+
+    .a {
+        font-size: 30px;
+        font-family: 楷体;
+        top: 40%;
+        left: 40%;
+    }
+
+    .b {
+        font-size: 30px;
+        font-family: 楷体;
+        top: 40%;
+        left: 45%;
+    }
+
+    .c {
+        font-size: 30px;
+        font-family: 楷体;
+        top: 30%;
+        left: 46%;
+    }
+
+    .cc {
+        font-size: 30px;
+        font-family: 楷体;
+        top: 40%;
+        left: 42%;
+    }
+
+    .d {
+        font-size: 18px;
+        font-family: 楷体;
+        top: 70%;
+        left: 45%;
+    }
+
+    .e {
+        font-size: 40px;
+        font-family: hakuyoxingshu7000;
+        top: 64%;
+        left: 51.5%;
+    }
+
+    .f {
+        font-size: 20px;
+        font-family: 楷体;
+        top: 75%;
+        left: 48%;
+    }
+
+    .g {
+        font-size: 30px;
+        font-family: hakuyoxingshu7000;
+        top: 79%;
+        left: 49%;
+    }
+
+    .ai {
+        top: 35.4%;
+        left: 46.8%;
+        font-family: hakuyoxingshu7000;
+        font-size: 20px;
+    }
+
+    .ni {
+        top: 35.4%;
+        left: 46.8%;
+        font-family: hakuyoxingshu7000;
+        font-size: 20px;
+    }
+
+    .de {
+        top: 35.4%;
+        left: 46.8%;
+        font-family: hakuyoxingshu7000;
+        font-size: 20px;
+    }
+
+    .gan {
+        top: 35.4%;
+        left: 46.8%;
+        font-family: hakuyoxingshu7000;
+        font-size: 20px;
+    }
+
+    .jue {
+        top: 35.4%;
+        left: 46.8%;
+        font-family: hakuyoxingshu7000;
+        font-size: 20px;
+    }
+
+    .zui {
+        top: 35.4%;
+        left: 46.8%;
+        font-family: hakuyoxingshu7000;
+        font-size: 20px;
+    }
+
+    .mei {
+        top: 35.4%;
+        left: 46.8%;
+        font-family: hakuyoxingshu7000;
+        font-size: 20px;
+    }
+
+    .hao {
+        top: 35.4%;
+        left: 46.8%;
+        font-family: hakuyoxingshu7000;
+        font-size: 20px;
+    }
+
+    .set {
+        top: 10%;
+        left: 40%;
+        font-family: hakuyoxingshu7000;
+        font-size: 30px;
+    }
+</style>
+<body bgcolor="#f0f0f0">
+<canvas class="cns" id="cns" width="1350px" height="100px"></canvas>
+<p class="once" id="once" onmouseover="once1()" onmouseout="once2()">第一次见面</p>
+<p class="once1" id="once1">世界除了你</br>还会爱谁</p>
+<p class="second" id="second" onmouseover="second1()" onmouseout="second2()">第一次游泳</p>
+<p class="second1" id="second1">我不会</br>但我要跟你学</p>
+<p class="third" id="third" onmouseover="third1()" onmouseout="third2()">第一次看电影</p>
+<p class="third1" id="third1">我多想揽你</br>入我的怀抱</p>
+<p class="fourth" id="fourth" onmouseover="fourth1()" onmouseout="fourth2()">第一次滑冰</p>
+<p class="fourth1" id="fourth1">当牵你的手</br>我感受到心跳</p>
+<p class="fifth" id="fifth" onmouseover="fifth1()" onmouseout="fifth2()">第一次登山</p>
+<p class="fifth1" id="fifth1">多少次觉得应该</br>表达我的心意</p>
+<p class="sixth" id="sixth" onmouseover="sixth1()" onmouseout="sixth2()">第一次拥抱</p>
+<p class="sixth1" id="sixth1">那时暗自虔诚发誓</br>要给你最好的</p>
+<p class="seventh" id="seventh" onmouseover="seventh1()" onmouseout="seventh2()">第一次生气</p>
+<p class="seventh1" id="seventh1">我万般自责</br>破坏了美好</p>
+<p class="eighth" id="eighth" onmouseover="eighth1()" onmouseout="eighth2()">这一刻</p>
+<p class="eighth1" id="eighth1">我好想你</p>
+<p id="a" class="a">一三年九月一日</p>
+<p id="b" class="b">相遇</p>
+<p id="c" class="c">时间</p>
+<p id="cc" class="cc">开始有了意义</p>
+<p id="d" class="d">世间所有的</p>
+<p id="e" class="e">相遇</p>
+<p id="f" class="f">都是久别</p>
+<p id="g" class="g">重逢</p>
+<p id="ai" class="ai">爱</p>
+<p id="ni" class="ni">你</p>
+<p id="de" class="de">的</p>
+<p id="gan" class="gan">感</p>
+<p id="jue" class="jue">觉</p>
+<p id="zui" class="zui">最</p>
+<p id="mei" class="mei">美</p>
+<p id="hao" class="hao">好</p>
+<p id="set" class="set">我们结婚吧！小诗诗</p>
+<img src="image/boy.png" class="boy" id="boy" onclick="st()">
+<img src="image/girl.png" class="girl" id="girl">
+<audio src="audio/bgm.mp3" autoplay="autoplay" loop="loop"></audio> <!-- 背景音乐 -->
+</body>
+</html>
