@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid-3</title>
+    <style>
+        body {
+            padding: 50px 300px;
+        }
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            grid-template-rows: repeat(3, 100px);
+            grid-template-areas: "header header header header"
+                                "main main . sidebar"
+                                "footer footer footer footer"
+        }
+        .box{
+            background-color: pink;
+            text-align: center;
+            margin: 2px;
+            padding: 2px 10px;
+        }
+        .item-a{
+             grid-area: header;
+         }
+        .item-b{
+            grid-area: main;
+        }
+        .item-c{
+            grid-area: sidebar;
+        }
+        .item-d{
+            grid-area: footer;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="box item-a">1</div>
+        <div class="box item-b">2</div>
+        <div class="box item-c">3</div>
+        <div class="box item-d">4</div>
+    </div>
+</body>
+</html>

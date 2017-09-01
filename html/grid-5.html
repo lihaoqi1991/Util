@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid-5</title>
+    <style>
+        body {
+            padding: 50px 300px;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-rows: repeat(2, 25vh);
+            grid-template-columns: repeat(3, auto);
+        }
+
+        .box {
+            background-color: pink;
+            text-align: center;
+            margin: 2px;
+            padding: 2px 10px;
+            display: -webkit-box;
+            -webkit-box-orient: horizontal;
+            -webkit-box-pack: center;
+            -webkit-box-align: center;
+        }
+
+        .item-a {
+            grid-area: 2/2/3/3;
+            background-color: #00c6ff;
+        }
+
+        /*.item-b {*/
+            /*grid-row-start: 2;*/
+            /*grid-row-end: 3;*/
+            /*grid-column-start: 2;*/
+            /*grid-column-end: 3;*/
+        /*}*/
+        /*.item-c{*/
+            /*grid-column: 2;*/
+            /*grid-row: 2;*/
+            /*background-color: #00c6ff;*/
+        /*}*/
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="box item-a">1</div>
+    <div class="box item-b">2</div>
+    <div class="box item-c">3</div>
+    <div class="box item-d">4</div>
+    <div class="box item-e">5</div>
+    <div class="box item-f">6</div>
+</div>
+</body>
+</html>

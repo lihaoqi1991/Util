@@ -58,6 +58,17 @@
             background-color: #f80;
             color: #fff;
         }
+
+        .container {
+            background-color: green;
+            overflow: hidden;
+        }
+
+        .container div {
+            float: left;
+            background-color: lightgreen;
+            margin: 10px;
+        }
     </style>
     <script>
         var $$ = function (id) {
@@ -76,17 +87,21 @@
     </script>
 </head>
 <body>
-<form>
-    <a class="btn-select" id="btn_select">
-        <span class="cur-select">请选择</span>
-        <select>
-            <option>选项一</option>
-            <option>选项二</option>
-            <option>选项三</option>
-            <option>选项四</option>
-            <option>选项五</option>
-        </select>
-    </a>
-</form>
+<!--<form>-->
+<!--<a class="btn-select" id="btn_select">-->
+<!--<span class="cur-select">请选择</span>-->
+<!--<select>-->
+<!--<option>选项一</option>-->
+<!--<option>选项二</option>-->
+<!--<option>选项三</option>-->
+<!--<option>选项四</option>-->
+<!--<option>选项五</option>-->
+<!--</select>-->
+<!--</a>-->
+<!--</form>-->
+<div class="container">
+    <div>Sibling</div>
+    <div>Sibling</div>
+</div>
 </body>
 </html>

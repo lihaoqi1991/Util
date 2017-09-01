@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid-8</title>
+    <style>
+        body {
+            /*padding: 50px 300px;*/
+            margin: 0;
+            padding: 0;
+        }
+        .header{
+            height: 50vh;
+            width: 50vw;
+            background-color: #0c55a7;
+        }
+        .wrapper {
+            display: grid;
+            grid-template-rows: repeat(2, 50px);
+            grid-template-columns: repeat(5, 100px);
+            grid-auto-flow: column;
+        }
+
+        .box {
+            background-color: pink;
+            text-align: center;
+            margin: 2px;
+            padding: 2px 10px;
+            display: -webkit-box;
+            -webkit-box-orient: horizontal;
+            -webkit-box-pack: center;
+            -webkit-box-align: center;
+        }
+
+        .item-b{
+            grid-column: 1;
+            grid-row: 1 / 3;
+            background-color: #00c6ff;
+        }
+
+        .item-a{
+            grid-column: 5;
+            grid-row: 1 / 3;
+            background-color: #5a980a;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+
+</div>
+    <div class="wrapper">
+        <div class="box item-a">1</div>
+        <div class="box item-b">2</div>
+        <div class="box item-c">3</div>
+        <div class="box item-d">4</div>
+        <div class="box item-e">5</div>
+    </div>
+</body>
+</html>

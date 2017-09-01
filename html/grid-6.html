@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grid-6</title>
+    <style>
+        body {
+            padding: 50px 300px;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-rows: repeat(3, 25vh);
+            grid-template-columns: repeat(4, auto);
+        }
+
+        .box {
+            background-color: pink;
+            text-align: center;
+            margin: 2px;
+            padding: 2px 10px;
+            display: -webkit-box;
+            -webkit-box-orient: horizontal;
+            -webkit-box-pack: center;
+            -webkit-box-align: center;
+        }
+
+        .item-a {
+            grid-row: 2/ span 2;
+            grid-column: span 3;
+            background-color: #00c6ff;
+        }
+
+        /*.item-b {*/
+            /*grid-row-start: 2;*/
+            /*grid-row-end: 3;*/
+            /*grid-column-start: 2;*/
+            /*grid-column-end: 3;*/
+        /*}*/
+        /*.item-c{*/
+            /*grid-column: 2;*/
+            /*grid-row: 2;*/
+            /*background-color: #00c6ff;*/
+        /*}*/
+
+        .item-b{
+            grid-column: 5 / 6;
+            grid-row: 2 / 3;
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="box item-a">1</div>
+    <div class="box item-b">2</div>
+    <div class="box item-c">3</div>
+    <div class="box item-d">4</div>
+    <div class="box item-e">5</div>
+    <div class="box item-f">6</div>
+    <div class="box item-g">7</div>
+</div>
+</body>
+</html>
